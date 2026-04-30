@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import json; nb=json.load\\(open\\('first_agent.ipynb'\\)\\); [print\\(f'--- Cell {i} ---\\\\n' + ''.join\\(c['source']\\)\\) for i, c in enumerate\\(nb['cells']\\)]\")",
+      "Bash(python -c \"import json; nb=json.load\\(open\\('first_agent.ipynb'\\)\\); [print\\(f'--- Cell {i} outputs ---\\\\n' + str\\(c.get\\('outputs', []\\)\\)\\) for i, c in enumerate\\(nb['cells']\\)]\")",
+      "Bash(python -c ' *)",
+      "Bash(python -c \"from langchain.agents import create_agent\")",
+      "Bash(python -c \"from langchain.agents import create_agent; print\\(create_agent\\)\")",
+      "Bash(python -c \"import langchain; print\\(langchain.__version__\\)\")",
+      "Bash(python -c \"import langchain_openai; print\\(langchain_openai.__version__\\)\")",
+      "Bash(pip show *)",
+      "Bash(uv pip *)"
+    ]
+  }
+}
